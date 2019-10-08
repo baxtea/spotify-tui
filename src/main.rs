@@ -200,6 +200,13 @@ fn main() -> Result<(), failure::Error> {
                                     app.set_current_route_state(Some(ActiveBlock::HelpMenu), None);
                                 }
 
+                                Key::Char('n') => {
+                                    app.next_track();
+                                }
+                                Key::Char('p') => {
+                                    app.prev_track();
+                                }
+
                                 Key::Ctrl('s') => {
                                     app.shuffle();
                                 }

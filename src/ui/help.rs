@@ -2,8 +2,6 @@ pub fn get_help_docs() -> Vec<Vec<&'static str>> {
     vec![
         vec!["General", "a", "Jump to currently playing album"],
         vec!["General", "s", "Save track"],
-        vec!["General", "<Ctrl+s>", "Toggle shuffle"],
-        vec!["General", "<Ctrl+r>", "Cycle repeat mode"],
         vec!["General", "h | <Left Arrow Key>", "Move selection left"],
         vec![
             "General",
@@ -17,7 +15,6 @@ pub fn get_help_docs() -> Vec<Vec<&'static str>> {
         ],
         vec!["General", "l | <Right Arrow Key>", "Move right"],
         vec!["General", "/", "Enter input for search"],
-        vec!["General", "<Space>", "Pause/Resume playback"],
         vec!["General", "<Enter>", "Enter active mode"],
         vec![
             "General",
@@ -25,6 +22,11 @@ pub fn get_help_docs() -> Vec<Vec<&'static str>> {
             "Go back or exit when nowhere left to back to",
         ],
         vec!["General", "d", "Select device to play music on"],
+        vec!["Playback", "<Space>", "Pause/Resume playback"],
+        vec!["Playback", "n", "Next track"],
+        vec!["Playback", "p", "Previous track"],
+        vec!["Playback", "<Ctrl+s>", "Toggle shuffle"],
+        vec!["Playback", "<Ctrl+r>", "Cycle repeat mode"],
         vec!["Selected block", "<Esc>", "Enter hover mode"],
         vec![
             "Selected block",

@@ -615,6 +615,28 @@ impl App {
         }
     }
 
+    pub fn next_track(&mut self) {
+        if let Some(spotify) = &self.spotify {
+            match spotify.next_track(self.client_config.device_id.clone()) {
+                Ok(()) => {}
+                Err(e) => {
+                    self.handle_error(e);
+                }
+            }
+        }
+    }
+
+    pub fn prev_track(&mut self) {
+        if let Some(spotify) = &self.spotify {
+            match spotify.previous_track(self.client_config.device_id.clone()) {
+                Ok(()) => {}
+                Err(e) => {
+                    self.handle_error(e);
+                }
+            }
+        }
+    }
+
     pub fn get_artist_albums(&mut self, artist_id: &str, artist_name: &str) {
         if let Some(spotify) = &self.spotify {
             match spotify.artist_albums(
